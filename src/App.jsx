@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useAuth } from "./context/authContext";
 import { Toaster } from "react-hot-toast";
 
-import Login from "./pages/Login";
 import UserProfile from "./pages/UserProfile";
+import Login from "./pages/Login";
 import DashboardLayout from "./components/dashboard";
 import UserList from "./pages/users/UserList";
 import AddUser from "./pages/users/AddUser";
