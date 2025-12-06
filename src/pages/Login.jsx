@@ -44,7 +44,16 @@ export default function Login() {
     setGlobalError("");
 
     try {
-      await login(data);
+      const res = await login(data);
+
+      const user = res.user;
+
+      if (user.role === "ADMIN") {
+        navigate("/dashboard");
+      } else {
+        navigate("/projects");
+      }
+
       navigate("/dashboard");
     } catch (err) {
       const errorMessage =
@@ -92,7 +101,7 @@ export default function Login() {
                 <LockOutlinedIcon />
               </Avatar>
               <Typography component="h1" variant="h5" fontWeight="bold">
-                Log in 
+                Log in
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 Sign in to continue to your dashboard
@@ -107,7 +116,6 @@ export default function Login() {
             )}
 
             <form onSubmit={handleSubmit(onSubmit)} noValidate>
-          
               <TextField
                 label="Email Address"
                 fullWidth
@@ -126,7 +134,6 @@ export default function Login() {
                 helperText={errors.email?.message}
               />
 
- 
               <TextField
                 label="Password"
                 type={showPassword ? "text" : "password"}

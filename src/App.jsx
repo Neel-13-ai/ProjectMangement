@@ -29,7 +29,7 @@ const AdminRoute = ({ children }) => {
   const { user } = useAuth();
 
   if (user?.role !== "ADMIN") {
-    return <Navigate to="/project" replace />;
+    return <Navigate to="/projects" replace />;
   }
 
   return children;
