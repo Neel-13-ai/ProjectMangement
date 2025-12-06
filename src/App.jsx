@@ -4,7 +4,7 @@ import { useAuth } from "./context/authContext";
 import { Toaster } from "react-hot-toast";
 
 import UserProfile from "./pages/UserProfile";
-import Login from "./pages/Login";
+import Login from "./pages/Login.jsx";
 import DashboardLayout from "./components/dashboard";
 import UserList from "./pages/users/UserList";
 import AddUser from "./pages/users/AddUser";
