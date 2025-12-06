@@ -3,8 +3,6 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useAuth } from "./context/authContext";
 import { Toaster } from "react-hot-toast";
 
-import Login from "./pages/Login";
-import DashboardHome from "./components/dashBoardHome";
 import UserProfile from "./pages/UserProfile";
 import DashboardLayout from "./components/dashboard";
 import UserList from "./pages/users/UserList";
@@ -17,6 +15,7 @@ import BugList from "./pages/Bug/BugList";
 import AddBug from "./pages/Bug/AddBug";
 import EditBug from "./pages/Bug/UpdateBug";
 import AdminDashboard from "./components/dashBoardHome";
+import Login from "./pages/Login";
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated } = useAuth();
