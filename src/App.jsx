@@ -15,7 +15,7 @@ import BugList from "./pages/Bug/BugList";
 import AddBug from "./pages/Bug/AddBug";
 import EditBug from "./pages/Bug/UpdateBug";
 import AdminDashboard from "./components/dashBoardHome";
-import Login from "./pages/Login.jsx";
+import Login from "./pages/Login";
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated } = useAuth();
