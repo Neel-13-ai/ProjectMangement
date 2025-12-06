@@ -96,7 +96,7 @@ export default function Sidebar({
             fontWeight="bold"
             sx={{ whiteSpace: "nowrap", transition: "0.3s" }}
           >
-            AssignMate
+            ProjectManagement
           </Typography>
         )}
       </Box>
